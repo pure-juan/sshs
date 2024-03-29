@@ -24,11 +24,12 @@ pub enum ConfigError {
     ErrParseFromFile(#[source] serde_yaml::Error),
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Server {
-    username: String,
-    host: String,
-    identity: Option<String>,
+    pub alias: String,
+    pub username: String,
+    pub host: String,
+    pub identity: Option<String>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
@@ -157,7 +158,12 @@ fn init_config_file(root_path: PathBuf) -> Result<(), ConfigError> {
 
 fn make_default_config() -> Config {
     Config {
-        servers: Vec::new(),
+        servers: vec!(Server {
+            alias: String::from("example-server"),
+            username: String::from("example"),
+            host: String::from("example"),
+            identity: Some("".to_string()),
+        }),
     }
 }
 

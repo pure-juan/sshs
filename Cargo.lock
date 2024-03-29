@@ -205,6 +205,12 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "5443807d6dff69373d433ab9ef5378ad8df50ca6298caf15de6e52e24aaf54d5"
 
 [[package]]
+name = "exitcode"
+version = "1.1.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "de853764b47027c2e862a995c34978ffa63c1501f2e15f987ba11bd4f9bba193"
+
+[[package]]
 name = "gimli"
 version = "0.28.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -398,11 +404,12 @@ dependencies = [
 
 [[package]]
 name = "sshs"
-version = "0.1.0"
+version = "1.0.0"
 dependencies = [
  "better-panic",
  "clap",
  "env_logger",
+ "exitcode",
  "home",
  "log",
  "serde",

@@ -18,11 +18,11 @@ $ nano ~/.sshs/server.yaml
 ```
 
 ```yaml
-- servers:
-  - alias: "example-server"
-    username: "example"
-    host: "127.0.0.1"
-    identity: "~/.ssh/id_rsa" # you can remove this field If this server using password authentication
+servers:
+- alias: "example-server"
+  username: "example"
+  host: "127.0.0.1"
+  identity: "~/.ssh/id_rsa" # you can remove this field If this server using password authentication
 ```
 
 ### --list
